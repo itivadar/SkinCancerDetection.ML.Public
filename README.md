@@ -28,20 +28,20 @@ Please note that this repo does not contains the source code of the whole system
 The systems consists of multiple micro-services:
 
 * __Web application__
-    * Provides the UI interface, authorization and authentication for user requests. 
+     * Provides the UI interface, authorization and authentication for user requests. 
 
-* __Image  processing service__
-    * Enhance the image quality by applying the Gray World Algorithm to the uploaded photos.
+* __Image processing service__
+    * Enhance the image quality by applying the Gray World Algorithm to the uploaded photos.
 
 * __The machine learning service__
-    * Uses the trained model to classify the user pictures.
+    * Uses the trained model to classify the user pictures.
 
 * __RabbitMQ (external service)__
-    * Provides communication abilities between all the other components.
-    * Communication between micro-services is done using events 
+     * Provides communication abilities between all the other components.
+     * Communication between micro-services is done using events 
 * __imagekit.io (external service)__
 
-    * External service which provides storage to store user photos. 
+    * External service which provides storage for uploaded photos. Offer access to the data for all the microservices. 
 
 Each micro-service manages a single functionality and it can be hosted independently of the others. Communication between components is done through a message broker. The client can access the system with the front-end application which is loaded in the browser. The front-end application is compatible with devices with small screen size.
 
@@ -70,20 +70,20 @@ The proportion between training and validation sets was 80:20.
 
 The user can see the progress of the photos through the processing pipeline. There are four steps until the results are done. The steps which are completed are marked by a blue check, the current one is marked by a spinning circle and the future steps are shown in gray. 
 
- * Validate > The uploaded file is check against predefined conditions (size, type, etc. ). Implemented by the Web App service. 
+* Validate > The uploaded file is check against predefined conditions (size, type, etc. ). Implemented by the Web App service. 
 
 * Store > The file is uploaded to the external storage provided by the imagekit.io. Implemented by the Web Appp service.
 
 * Enhance > We apply a filter on the photo to improve brightness. Implemented by the Image Processing Service. 
 
-* Analyze > A model trained by machine learning classify the photos in  one of the classes: malignant or benign. 
+* Analyze > A model trained by machine learning classify the photos in one of the classes: malignant or benign. The Machine Learning service is responsable for this step.
 
 The implementation of the page can be possible because of the Event-Driven Design of the micro-services. The communication follows the Pub / Sub pattern to provide decoupling for each micro-service. The RabbitMQ is the broker message which acts as the infrastructure for communications. 
 
 ## Details page
 ![Details](Pic/details.png)
 
-User can see information about the results of classification along with other information on the details page. The page contains a thumbnail of the user's photo and a pie chart representing the probabilities for the image to belong to each class (malignant or benign). 
+User can see information about the results of classification along with other information on the details page. The page contains a thumbnail of the user's photo and a pie chart representing the probability ratio between the two classes (malignant and benign).
 The output of a machine learning model is an array of probabilities assign to each class. The result of classification is the class with the highest probability. 
 
 ## History page
@@ -93,7 +93,7 @@ One of the most important aspect of detecting skin cancer is the evolution in ti
 Search functionality is provided for the history page.
 
 ## Loving dark theme 
-Of course, the application features a cool looking dark theme:
+Of course, the application features a cool looking dark theme.
 ![Dark theme](Pic/dark-theme.png)
 
 
