@@ -57,11 +57,15 @@ The dataset used for training & validation is [HAM10000, a large collection of m
 
 The number of photos used is 2940 divided into two classes: malignant and benign with about the same number of photos in each class.
 
-||Photos count|
+<center>
+
+|Class|Photos count|
 |--|--|
 |``malignant``| 1433|
 |``benign``| 1507|
 |total|2940
+
+</center>
 
 The proportion between training and validation sets was 80:20.
 
