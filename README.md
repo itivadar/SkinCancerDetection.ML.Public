@@ -2,7 +2,7 @@
 
 The solution implemented for early detection of the skin cancer. It allows user to upload photos of their skin moles in order to be checked for skin cancer detection using machine learning algorithms. The outcome would be a pro probability for that mole to become skin cancer.
 
-The accuracy of the system is 84,8%. 
+The arhicterture of the system is based on microservices and the accuracy of the system is 84,8%. 
 
  The application features a page for displaying real-time processing progress of each photo, a page for history information and of course dark theme!
 
