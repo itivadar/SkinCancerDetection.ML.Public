@@ -1,10 +1,11 @@
 # Skin cancer detection system using Machine Learning
 
-The solution implemented for early detection of the skin cancer. It allows user to upload photos of their skin moles in order to be checked for skin cancer detection using machine learning algorithms. The outcome would be a pro probability for that mole to become skin cancer.
+The scope of this solution is to help users to detect skin cancer in early stages. One of the features allows users to upload photos of their skin moles in the application. The photos are later checked for skin cancer detection using **Machine Learning** algorithms. The result would be a probability that the mole will develop into skin cancer.
 
-The arhicterture of the system is based on microservices and the accuracy of the system is 84,8%. 
-
- The application features a page for displaying real-time processing progress of each photo, a page for history information and of course dark theme!
+The architecture of the system is based on **Microservices with Event-Driven Design** in mind. 
+**The accuracy of the system is 84,8%.**
+ 
+The application features a page for displaying real-time processing progress of each photo, a page for history information and of course dark theme!
 
 The technologies used were 
 * C# for back-end, 
@@ -19,7 +20,8 @@ The technologies used were
 * SQL
 * ImageSharp
 
-Please note that this repo does not contains the source code of the whole system. 
+Please note that this repo does not contain the source code of the whole system. 
+
 
 ## Work-flow 
 ![Flow](Pic/complete-flow.gif)
